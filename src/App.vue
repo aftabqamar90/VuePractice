@@ -14,8 +14,8 @@ export default {
     SayHello
   },
   methods: {
-    HelloMethod(){
-      alert('Say hello');
+    HelloMethod(param){
+      alert(param);
     },
   },    
 };

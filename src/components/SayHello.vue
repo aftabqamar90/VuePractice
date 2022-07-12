@@ -1,5 +1,5 @@
 <template>
-     <button @click="$emit('onSayHello')">Say Hello</button>
+     <button @click="$emit('onSayHello','With Parameter')">Say Hello</button>
 </template>
 <script>
 export default {
