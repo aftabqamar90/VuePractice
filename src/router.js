@@ -1,7 +1,9 @@
 import { createWebHashHistory ,createRouter} from "vue-router";
 
-import Home from './components/Home.vue';
-import About from './components/About.vue';
+import Home from './components/views/Home.vue';
+import About from './components/views/About.vue';
+import Contact from './components/views/Contact.vue';
+import test from './components/users/test.vue';
 
 const routes=[
     {
@@ -14,11 +16,22 @@ const routes=[
         name:'About',
         component:About
     },
+    {
+        path:'/Contact',
+        name:'Contact',
+        component:Contact
+    },
+    {
+        path:"/test",
+        name:'test',
+        component:test
+    },
 ];
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
+    linkExactActiveClass:'has-text-success'
 });
 
 export default router;

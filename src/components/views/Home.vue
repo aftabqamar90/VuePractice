@@ -1,15 +1,17 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template >
-    <div>
-        Home
-    </div>
-
+    <users />
 </template>
 
 <script>
+import users from '../users/users.vue';
 export default 
 {
     // eslint-disable-next-line vue/multi-word-component-names
-    name :'Home'
+    name :'Home',
+    components:
+    {
+        users
+    }
 }
 </script>
