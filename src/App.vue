@@ -1,29 +1,18 @@
 <template>
- <div id="app">
-    <div class="section">
-      <div class="container">
-          <div class="box">
-              Hello world
-          </div>
-      </div>
-    </div>
+  <div>
+    <router-link to="/">Home</router-link>
+    <router-link to="/About">About</router-link>
   </div>
+  <router-view></router-view>
 </template>
-<style>
-.box-color:hover{
-  cursor: pointer;
-  opacity:0.6
-}
-</style>
+
 <script>
-import   "bulma/css/bulma.css"
+import Hello from './components/Hello.vue'
+
 export default {
   name: 'App',
-  components: {},
-  methods:{
-    ChangeColor(color){
-        this.boxColor=color;
-      }
-    },
-} 
+  components: {
+    Hello
+  }
+}
 </script>
