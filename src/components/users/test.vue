@@ -33,7 +33,7 @@ export default {
     },
     async created(){
         const id = this.$route.query.id;
-        const result = await axios.get('https://jsonplaceholder.typicode.com/users/'+id);
+        const result = await axios.get(process.env.VUE_APP_API_URL+'users/'+id);
         this.user = result.data;
     }
 }

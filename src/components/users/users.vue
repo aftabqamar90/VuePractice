@@ -26,7 +26,7 @@ export default {
         }
     },
     async created() {
-        const result = await axios.get('https://jsonplaceholder.typicode.com/users');
+        const result = await axios.get(process.env.VUE_APP_API_URL+'users');
         this.users = result.data;
     },
 }
